@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Tic Tac Toe in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an implementation of the classic **Tic Tac Toe (Tic Tac Toe)** using **React**.
+It was developed with the aim of **practicing and consolidating knowledge in modern front-end development**, especially with the React ecosystem.
 
-Currently, two official plugins are available:
+## Project Objective
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is part of my studies in web development. The main idea is to practice important concepts such as:
 
-## React Compiler
+* Componentization in **React**
+* Use of **TypeScript** for static typing
+* State management with **Hooks**
+* Structuring front-end projects
+* Code versioning with **Git**
+* Publishing and version control with **GitHub**
+* Styling with **CSS**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Furthermore, the project also helps to better understand **good code organization practices and interface logic**.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* React
+* TypeScript
+* CSS
+* Git
+* GitHub
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Interactive **Tic Tac Toe** interface
+* Dynamic game state update
+* Marking plays with **X** and **O**
+* Structure based on **reusable components**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Learnings
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+During the development of this project, I am practicing important concepts such as:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Creation of **React components**
+* Passage of **props**
+* Handling **events**
+* **Status** update
+* Organization of code in React projects
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## About the Project
+
+This is not a project with a commercial or production focus, but rather a **study project** with the aim of deepening my knowledge in **React and modern front-end development**.
+
+## Author
+
+Developed by **Me**
+As part of the studies in **React and web development** the basis and studies are the React documentation for this project.
