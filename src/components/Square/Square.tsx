@@ -6,9 +6,12 @@ type SquareProps = {
 };
 
 export default function Square({ value, onSquareClick }: SquareProps) {
+
+  const className = `square ${value === "X" ? "x" : value === "O" ? "o" : ""}`;
+
   return (
     <button
-      className="square"
+      className={className}
       onClick={onSquareClick}
     >
       {value}

@@ -34,6 +34,84 @@ body {
   margin-bottom: 0;
 }
 
+
+/* ========================= */
+/* PLACAR */
+/* ========================= */
+
+.scoreboard {
+  position: fixed;
+
+  top: 25px;
+  left: 25px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.6),
+    inset 0 0 12px rgba(255,255,255,0.05);
+}
+
+/* Título do placar */
+.score-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #f8fafc;
+  opacity: 0.8;
+
+  text-align: center;
+}
+
+/* Linha do placar */
+.score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 25px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #f8fafc;
+}
+
+/* Jogador X */
+.player-x {
+  color: #ef4444;
+
+  text-shadow:
+    0 0 8px rgba(239,68,68,0.7),
+    0 0 15px rgba(239,68,68,0.4);
+}
+
+/* Jogador O */
+.player-o {
+  color: #38bdf8;
+
+  text-shadow:
+    0 0 8px rgba(56,189,248,0.7),
+    0 0 15px rgba(56,189,248,0.4);
+}
+
+/* Pontos */
+.points {
+  font-size: 22px;
+  font-weight: 800;
+
+  color: #ffffff;
+}
 /*Titulo do jogo*/
 .titulo {
   text-align: center;
@@ -51,6 +129,49 @@ body {
     0 4px 10px rgba(0,0,0,0.6),
     0 0 20px rgba(239, 68, 68, 0.686),
     0 0 40px rgba(239,68,68,0.4);
+}
+
+.button-restart {
+  margin-top: 0px;
+  padding: 10px 28px;
+
+  border: none;
+  border-radius: 14px;
+
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  color: #f8fafc;
+
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.4),
+    0 0 15px rgba(239,68,68,0.5);
+}
+
+/* Hover */
+.button-restart:hover {
+  transform: translateY(-3px) scale(1.05);
+
+  background: linear-gradient(135deg,#f87171,#ef4444);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.6),
+    0 0 25px rgba(239,68,68,0.8);
+}
+
+/* Clique */
+.button-restart:active {
+  transform: scale(0.92);
+
+  box-shadow:
+    inset 0 5px 12px rgba(0,0,0,0.4);
 }
 
 /* Botão do quadrado */
@@ -95,4 +216,85 @@ body {
 .square:not(:empty) {
   background: linear-gradient(145deg,#f8fafc,#e2e8f0);
   text-shadow: 0 0 10px rgba(239,68,68,0.6);
+}
+
+/* Cor do X */
+.square.x {
+  color: #ef4444;
+
+  text-shadow:
+    0 0 8px rgba(239,68,68,0.8),
+    0 0 18px rgba(239,68,68,0.6);
+}
+
+/* Cor do O */
+.square.o {
+  color: #38bdf8;
+
+  text-shadow:
+    0 0 8px rgba(56,189,248,0.8),
+    0 0 18px rgba(56,189,248,0.6);
+}
+
+/* Fundo escuro da tela */
+.winner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,0.7);
+
+  backdrop-filter: blur(5px);
+}
+
+/* Caixa do popup */
+.winner-modal {
+  padding: 40px 50px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.7),
+    inset 0 0 15px rgba(255,255,255,0.05);
+
+  animation: popup 0.3s ease;
+}
+
+/* Texto */
+.winner-modal h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* Cor do vencedor */
+.winner-modal span {
+  color: #ef4444;
+
+  text-shadow:
+    0 0 10px rgba(239,68,68,0.8),
+    0 0 20px rgba(239,68,68,0.6);
+}
+
+/* Animação */
+@keyframes popup {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
