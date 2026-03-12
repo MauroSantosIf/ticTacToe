@@ -4,7 +4,7 @@ import Square from "./components/Square/Square";
 export default function App() {
 
   const [xIsNext, SetXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, SetSquares] = useState(Array(9).fill(null));
 
   const [scoreX, setScoreX] = useState(0);
   const [scoreO, setScoreO] = useState(0);
@@ -12,8 +12,8 @@ export default function App() {
   
 
   function restartGame() {
-  setSquares(Array(9).fill(null));
-  setXIsNext(true);
+  SetSquares(Array(9).fill(null));
+  SetXIsNext(true);
   }
 
   function calculateWinner(squares: any[]){
@@ -60,7 +60,7 @@ export default function App() {
     }
 
 
-    setSquares(nextSquares);
+    SetSquares(nextSquares);
     SetXIsNext(!xIsNext);
   }
 
