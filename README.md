@@ -50,3 +50,15 @@ This is not a project with a commercial or production focus, but rather a **stud
 
 Developed by **Me**
 As part of the studies in **React and web development** the basis and studies are the React documentation for this project.
+
+
+## Accessing the Repository
+
+You can access the source code of this project on GitHub:
+
+[https://github.com/MauroSantosIf/ticTacToe](https://github.com/MauroSantosIf/ticTacToe)
+
+Or clone it directly using Git:
+
+```bash
+git clone https://github.com/MauroSantosIf/ticTacToe.git
